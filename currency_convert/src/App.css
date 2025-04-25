@@ -17,6 +17,12 @@
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
+.container{
+  background-color: rgba(126, 199, 218, 0.626);
+  height: 43vh;
+  width: 49vw;
+  border-radius: 2vh;
+}
 
 @keyframes logo-spin {
   from {
