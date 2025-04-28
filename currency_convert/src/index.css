@@ -1,18 +1,152 @@
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
   background-image: url('https://m.media-amazon.com/images/I/91OGvkgkEbL.jpg');
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
-
+  min-height: 100vh;
+  margin: 0;
 }
-.container{
-  background-color: rgba(126, 199, 218, 0.626);
-  height: 43vh;
-  width: 49vw;
-  border-radius: 2vh;
- 
+
+body {
+  font-size: 16px;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-color: rgba(126, 199, 218, 0.8);
+  width: 90vw;
+  max-width: 600px;
+  min-height: 60vh;
+  border-radius: 1.5vw;
+  padding: 2vw;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.converter-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.input-group {
+  margin-bottom: 2vh;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+label {
+  font-size: 1rem;
+  margin-bottom: 0.5vh;
+}
+
+input, select {
+  width: 100%;
+  padding: 1.2vh;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-top: 1vh;
+  background-color: white;
+  color: black;
+}
+
+select {
+  font-size: 1rem;
+}
+
+button {
+  padding: 1.5vh 3vw;
+  background-color: rgb(6, 100, 240);
+  border-radius: 0.5vw;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s ease;
+  margin-top: 2vh;
+  width: 60%; 
+  display: block;
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: rgb(0, 123, 255);
+}
+
+.swap-btn {
+  background-color: rgb(255, 165, 0);
+  color: white;
+}
+
+.swap-btn:hover {
+  background-color: rgb(255, 140, 0);
+}
+
+.convert-btn {
+  background-color: rgb(6, 100, 240);
+  color: white;
+}
+
+.convert-btn:hover {
+  background-color: rgb(0, 123, 255);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    width: 95vw;
+    min-height: auto;
+    padding: 5vw;
+  }
+
+  input, select {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  button {
+    width: 80%; 
+    font-size: 1.2rem;
+    padding: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 90vw;
+    min-height: auto;
+    padding: 8vw;
+  }
+
+  input, select {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+
+  button {
+    width: 90%;
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  .input-group {
+    margin-bottom: 5vh;
+  }
 }
